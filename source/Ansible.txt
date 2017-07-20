@@ -173,3 +173,39 @@ Ansibleの構成要素
 5. ローカルサーバにログが収集されていることを確認しましょう。
 
  ``# ls -a /var/log/ansible-collect-logs/``
+
+システム情報収集Playbook
+==========================
+
+| Ansibleを使用したシステム情報収集のPlaybookを紹介します。
+| 
+
+1. まず下記ファイルをダウンロードします。
+
+ :download:`compare_configs<compare_configs>`
+
+2. ファイルを ``/etc/ansible/`` にディレクトリごと格納します。
+
+ ディレクトリ構造 ::
+
+  /etc/ansible/compare_configs/
+
+    create-config.sh
+    hosts
+    main.yml
+    
+    roles/testservers/tasks
+  
+    main.yml
+  
+3. インベントリファイルの対象サーバを編集します。
+
+| 
+
+4. Playbookを実行します。
+
+ ``# ansible-playbook -i /etc/ansible/compare_configs/hosts /etc/ansible/compare_configs/main.yml``
+
+5. ローカルサーバにシステム情報が収集されていることを確認しましょう。
+
+ ``# ls -a /var/log/ansible-compare-configs/``
