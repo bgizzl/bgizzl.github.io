@@ -95,11 +95,14 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Ansible</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">はじめに</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">インストール手順</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Ansibleの構成要素</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">ベストプラクティス</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">モジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Ansibleのメリット</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Ansibleの構成要素</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">ベストプラクティス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">モジュール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#playbook">ログ収集Playbook</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">システム情報収集Playbook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">システム情報収集Playbook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Playbook実行結果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">トラブルシューティング</a></li>
 </ul>
 </li>
 </ul>
@@ -209,7 +212,18 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2>Ansibleの構成要素<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Ansibleのメリット<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div>Ansibleには下記のような利点があります。このことからAnsibleは構成管理ツールとして優位性があると考えられます。</div></blockquote>
+<ul class="simple">
+<li>冪等性</li>
+<li>エージェントレス</li>
+<li>モジュールによる拡張</li>
+<li>コードがシンプル</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>Ansibleの構成要素<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div>Ansibleを使いこなすにあたって特に重要な3つの要素を記載します。</div></blockquote>
 <ul class="simple">
@@ -237,8 +251,8 @@
 <div class="line"><br /></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>ベストプラクティス<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id5">
+<h2>ベストプラクティス<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">Playbookを作成するうえで、可読性、運用性を高めるために最適なディレクトリ構造があります。作成にとりかかる前に理解をしておきましょう。</div>
 <div class="line"><br /></div>
@@ -292,8 +306,8 @@
 </div>
 </div></blockquote>
 </div>
-<div class="section" id="id5">
-<h2>モジュール<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id6">
+<h2>モジュール<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">Playbookはモジュールを組み合わせて作成されます。モジュールの一覧は公式ドキュメントにありますが、見難いので代表的なものをピックアップします。</div>
 </div>
@@ -364,8 +378,8 @@
 <blockquote>
 <div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ls</span> <span class="pre">-a</span> <span class="pre">/var/log/ansible-collect-logs/</span></code></div></blockquote>
 </div>
-<div class="section" id="id6">
-<h2>システム情報収集Playbook<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id7">
+<h2>システム情報収集Playbook<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">Ansibleを使用したシステム情報収集のPlaybookを紹介します。</div>
 <div class="line"><br /></div>
@@ -408,6 +422,74 @@
 </ol>
 <blockquote>
 <div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ls</span> <span class="pre">-a</span> <span class="pre">/var/log/ansible-compare-configs/</span></code></div></blockquote>
+</div>
+<div class="section" id="id8">
+<h2>Playbook実行結果<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">Playbookが実行されると最後に結果が表示されます。</div>
+<div class="line"><br /></div>
+</div>
+<table border="1" class="colwidths-given docutils" id="id10">
+<caption><span class="caption-text"><strong>Playbook実行結果</strong></span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="40%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">判定項目</th>
+<th class="head">説明</th>
+<th class="head">判定結果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>OK</td>
+<td>定義された状態となっている</td>
+<td>数値:処理タスク数</td>
+</tr>
+<tr class="row-odd"><td>Changed</td>
+<td>定義された状態に変更が行われた</td>
+<td>数値:処理タスク数</td>
+</tr>
+<tr class="row-even"><td>Unreachable</td>
+<td>リモートホストへの接続結果判定</td>
+<td>0=正常処理・1=異常処理</td>
+</tr>
+<tr class="row-odd"><td>Failed</td>
+<td>タスクの実行結果判定</td>
+<td>0=正常処理・1=異常処理</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h2>トラブルシューティング<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">Ansibleのトラブルシューティングについていくつか紹介します。</div>
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li>結果がunreachable(疎通不可)となる。</li>
+</ol>
+<div class="line-block">
+<div class="line">⇒ SSH出来るようにしましょう。</div>
+<div class="line">・対象サーバにSSHは可能ですか？</div>
+<div class="line">・.ssh/known_hostsに対象サーバの記載がありますか？</div>
+<div class="line">・.ssh/known_hostsの対象サーバの記載は古くありませんか？</div>
+<div class="line">・pingは通りますか？</div>
+<div class="line">・SSHするユーザーは正しく存在するユーザーですか？</div>
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>結果がfailedとなる。</li>
+</ol>
+<div class="line-block">
+<div class="line">⇒ failedには様々な原因が考えられます。まずはPlaybookコマンドに <code class="docutils literal"><span class="pre">-vvv</span></code> をつけてデバッグしてみましょう。</div>
+<div class="line">・例: <code class="docutils literal"><span class="pre">#</span> <span class="pre">ansible-playbook</span> <span class="pre">-vvv</span> <span class="pre">-i</span> <span class="pre">/etc/ansible/collect_logs/hosts</span> <span class="pre">/etc/ansible/collect_logs/main.yml</span></code></div>
+<div class="line">・原因が判明したら、その原因を取り除きます。</div>
+<div class="line">・その他構文エラーも多く見られます。一度Playbookを見直してみましょう。</div>
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 

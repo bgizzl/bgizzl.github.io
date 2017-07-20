@@ -41,6 +41,16 @@ Ansible
  | 詳細は下記を参照のこと。
  | 参照先:http://docs.ansible.com/ansible/intro_installation.html#latest-release-via-yum
 
+Ansibleのメリット
+==========================
+
+ Ansibleには下記のような利点があります。このことからAnsibleは構成管理ツールとして優位性があると考えられます。
+
+- 冪等性
+- エージェントレス
+- モジュールによる拡張
+- コードがシンプル
+
 Ansibleの構成要素
 ==========================
 
@@ -209,3 +219,45 @@ Ansibleの構成要素
 5. ローカルサーバにシステム情報が収集されていることを確認しましょう。
 
  ``# ls -a /var/log/ansible-compare-configs/``
+
+Playbook実行結果
+==========================
+
+| Playbookが実行されると最後に結果が表示されます。
+| 
+
+.. csv-table:: **Playbook実行結果**
+ :header: "判定項目", "説明", "判定結果"
+ :widths: 10, 20, 20
+
+ "OK", "定義された状態となっている", "数値:処理タスク数"
+ "Changed", "定義された状態に変更が行われた", "数値:処理タスク数"
+ "Unreachable", "リモートホストへの接続結果判定", "0=正常処理・1=異常処理"
+ "Failed", "タスクの実行結果判定", "0=正常処理・1=異常処理"
+
+トラブルシューティング
+==========================
+
+| Ansibleのトラブルシューティングについていくつか紹介します。
+| 
+
+1. 結果がunreachable(疎通不可)となる。
+
+| ⇒ SSH出来るようにしましょう。
+| ・対象サーバにSSHは可能ですか？
+| ・.ssh/known_hostsに対象サーバの記載がありますか？
+| ・.ssh/known_hostsの対象サーバの記載は古くありませんか？
+| ・pingは通りますか？
+| ・SSHするユーザーは正しく存在するユーザーですか？
+|
+
+2. 結果がfailedとなる。
+
+| ⇒ failedには様々な原因が考えられます。まずはPlaybookコマンドに ``-vvv`` をつけてデバッグしてみましょう。
+| ・例: ``# ansible-playbook -vvv -i /etc/ansible/collect_logs/hosts /etc/ansible/collect_logs/main.yml``
+| ・原因が判明したら、その原因を取り除きます。
+| ・その他構文エラーも多く見られます。一度Playbookを見直してみましょう。
+| 
+
+
+
