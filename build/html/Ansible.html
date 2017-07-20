@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ansible &mdash; manual 0.1 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="検索" href="search.html"/>
+    <link rel="top" title="manual 0.1 ドキュメント" href="index.html"/>
+        <link rel="prev" title="Sphinx" href="Sphinx.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sphinx.html">Sphinx</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ansible</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">インストール手順</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Ansibleの構成要素</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">ベストプラクティス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">モジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#playbook">ログ収集Playbook</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">manual</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Ansible</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Ansible.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ansible">
+<h1>Ansible<a class="headerlink" href="#ansible" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>はじめに<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>本ドキュメントは構成管理ツールであるAnsibleの導入手順について説明したものとなります。</p>
+</div>
+<div class="section" id="id2">
+<h2>インストール手順<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<div class="last line-block">
+<div class="line">本手順はCentOS7.2を想定して書かれています。</div>
+<div class="line">尚、作業の際はrootで作業することを想定しています。</div>
+<div class="line">事前にOSが正常にセットアップされているものとします。</div>
+</div>
+</div>
+<p><strong>1. YUMリポジトリにEPELを追加</strong></p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">#</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">epel-release</span></code></div></blockquote>
+<p><strong>2. Ansibleのインストール</strong></p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">#</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">--enablerepo=epel</span> <span class="pre">ansible</span></code></div></blockquote>
+<p><strong>3. バージョンの確認</strong></p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ansible</span> <span class="pre">--version</span></code></div></blockquote>
+<p><strong>4. Ansibleの動作確認</strong></p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ansible</span> <span class="pre">-m</span> <span class="pre">ping</span> <span class="pre">127.0.0.1</span></code></div></blockquote>
+<div class="admonition hint">
+<p class="first admonition-title">ヒント</p>
+<div class="last line-block">
+<div class="line">結果に <strong>SUCCESS</strong> が表示されていること</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<div class="last line-block">
+<div class="line">バージョンを指定してインストールする場合、別途手順となります。</div>
+<div class="line">詳細は下記を参照のこと。</div>
+<div class="line">参照先:<a class="reference external" href="http://docs.ansible.com/ansible/intro_installation.html#latest-release-via-yum">http://docs.ansible.com/ansible/intro_installation.html#latest-release-via-yum</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Ansibleの構成要素<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div>Ansibleを使いこなすにあたって特に重要な3つの要素を記載します。</div></blockquote>
+<ul class="simple">
+<li>インベントリファイル</li>
+</ul>
+<blockquote>
+<div><p>Ansibleの実行対象を記述したファイルとなります。 <code class="docutils literal"><span class="pre">/etc/ansible/hosts</span></code> に下記を追記します。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">testservers</span><span class="p">]</span>
+<span class="n">test01</span> <span class="n">ansible_host</span><span class="o">=</span><span class="s2">&quot;対象サーバのIPアドレス&quot;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">ansible</span> <span class="pre">all</span> <span class="pre">-m</span> <span class="pre">ping</span></code> を実行し、対象サーバが <strong>SUCCESS</strong> となることを確認しましょう。</p>
+</div></blockquote>
+<ul class="simple">
+<li>Playbook</li>
+</ul>
+<blockquote>
+<div>Ansibleの実行処理をコードで記述したものとなります。このYML形式のコードを元にAnsibleは処理を実行します。</div></blockquote>
+<ul class="simple">
+<li>コンフィグファイル</li>
+</ul>
+<div class="line-block">
+<div class="line">Ansibleの設定情報が記載されています。</div>
+<div class="line">設定変更が必要な際 <code class="docutils literal"><span class="pre">/etc/ansible/ansible.cfg</span></code> を編集します。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>ベストプラクティス<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">Playbookを作成するうえで、可読性、運用性を高めるために最適なディレクトリ構造があります。作成にとりかかる前に理解をしておきましょう。</div>
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li>ディレクトリ構造</li>
+</ul>
+<blockquote>
+<div><p>公式ドキュメントより:<a class="reference external" href="http://docs.ansible.com/ansible/playbooks_best_practices.html">http://docs.ansible.com/ansible/playbooks_best_practices.html</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">production</span>                <span class="c1"># inventory file for production servers</span>
+<span class="n">staging</span>                   <span class="c1"># inventory file for staging environment</span>
+
+<span class="n">group_vars</span><span class="o">/</span>
+   <span class="n">group1</span>                 <span class="c1"># here we assign variables to particular groups</span>
+   <span class="n">group2</span>                 <span class="c1"># &quot;&quot;</span>
+<span class="n">host_vars</span><span class="o">/</span>
+   <span class="n">hostname1</span>              <span class="c1"># if systems need specific variables, put them here</span>
+   <span class="n">hostname2</span>              <span class="c1"># &quot;&quot;</span>
+
+<span class="n">library</span><span class="o">/</span>                  <span class="c1"># if any custom modules, put them here (optional)</span>
+<span class="n">filter_plugins</span><span class="o">/</span>           <span class="c1"># if any custom filter plugins, put them here (optional)</span>
+
+<span class="n">site</span><span class="o">.</span><span class="n">yml</span>                  <span class="c1"># master playbook</span>
+<span class="n">webservers</span><span class="o">.</span><span class="n">yml</span>            <span class="c1"># playbook for webserver tier</span>
+<span class="n">dbservers</span><span class="o">.</span><span class="n">yml</span>             <span class="c1"># playbook for dbserver tier</span>
+
+<span class="n">roles</span><span class="o">/</span>
+    <span class="n">common</span><span class="o">/</span>               <span class="c1"># this hierarchy represents a &quot;role&quot;</span>
+        <span class="n">tasks</span><span class="o">/</span>            <span class="c1">#</span>
+            <span class="n">main</span><span class="o">.</span><span class="n">yml</span>      <span class="c1">#  &lt;-- tasks file can include smaller files if warranted</span>
+        <span class="n">handlers</span><span class="o">/</span>         <span class="c1">#</span>
+            <span class="n">main</span><span class="o">.</span><span class="n">yml</span>      <span class="c1">#  &lt;-- handlers file</span>
+        <span class="n">templates</span><span class="o">/</span>        <span class="c1">#  &lt;-- files for use with the template resource</span>
+            <span class="n">ntp</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">j2</span>   <span class="c1">#  &lt;------- templates end in .j2</span>
+        <span class="n">files</span><span class="o">/</span>            <span class="c1">#</span>
+            <span class="n">bar</span><span class="o">.</span><span class="n">txt</span>       <span class="c1">#  &lt;-- files for use with the copy resource</span>
+            <span class="n">foo</span><span class="o">.</span><span class="n">sh</span>        <span class="c1">#  &lt;-- script files for use with the script resource</span>
+        <span class="nb">vars</span><span class="o">/</span>             <span class="c1">#</span>
+            <span class="n">main</span><span class="o">.</span><span class="n">yml</span>      <span class="c1">#  &lt;-- variables associated with this role</span>
+        <span class="n">defaults</span><span class="o">/</span>         <span class="c1">#</span>
+            <span class="n">main</span><span class="o">.</span><span class="n">yml</span>      <span class="c1">#  &lt;-- default lower priority variables for this role</span>
+        <span class="n">meta</span><span class="o">/</span>             <span class="c1">#</span>
+            <span class="n">main</span><span class="o">.</span><span class="n">yml</span>      <span class="c1">#  &lt;-- role dependencies</span>
+        <span class="n">library</span><span class="o">/</span>          <span class="c1"># roles can also include custom modules</span>
+        <span class="n">lookup_plugins</span><span class="o">/</span>   <span class="c1"># or other types of plugins, like lookup in this case</span>
+
+    <span class="n">webtier</span><span class="o">/</span>              <span class="c1"># same kind of structure as &quot;common&quot; was above, done for the webtier role</span>
+    <span class="n">monitoring</span><span class="o">/</span>           <span class="c1"># &quot;&quot;</span>
+    <span class="n">fooapp</span><span class="o">/</span>               <span class="c1"># &quot;&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>モジュール<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">Playbookはモジュールを組み合わせて作成されます。モジュールの一覧は公式ドキュメントにありますが、見難いので代表的なものをピックアップします。</div>
+</div>
+<blockquote>
+<div>公式ドキュメント:<a class="reference external" href="http://docs.ansible.com/ansible/modules_by_category.html">http://docs.ansible.com/ansible/modules_by_category.html</a></div></blockquote>
+<ul class="simple">
+<li>file</li>
+</ul>
+<blockquote>
+<div>ファイルやシンボリックリンクやディレクトリを作成したり、削除したり、属性変更するモジュール。</div></blockquote>
+<ul class="simple">
+<li>copy</li>
+</ul>
+<blockquote>
+<div>ローカルにあるファイルやディレクトリを、対象サーバにコピーする。</div></blockquote>
+<ul class="simple">
+<li>shell</li>
+</ul>
+<blockquote>
+<div>クライアント側でコマンドを実行する。</div></blockquote>
+<ul class="simple">
+<li>fetch</li>
+</ul>
+<blockquote>
+<div>対象サーバからローカルにファイルを取得する。Copyモジュールとの違いに注意。</div></blockquote>
+</div>
+<div class="section" id="playbook">
+<h2>ログ収集Playbook<a class="headerlink" href="#playbook" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">Ansibleを使用したログ収集のPlaybookを紹介します。</div>
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li>まず下記ファイルをダウンロードします。</li>
+</ol>
+<blockquote>
+<div><code class="xref download docutils literal"><span class="pre">collect_logs</span></code></div></blockquote>
+<ol class="arabic simple" start="2">
+<li>ファイルを <code class="docutils literal"><span class="pre">/etc/ansible/</span></code> にディレクトリごと格納します。</li>
+</ol>
+<blockquote>
+<div><p>ディレクトリ構造</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ansible</span><span class="o">/</span><span class="n">collect_logs</span><span class="o">/</span>
+
+  <span class="n">hosts</span>
+  <span class="n">main</span><span class="o">.</span><span class="n">yml</span>
+
+  <span class="n">roles</span><span class="o">/</span><span class="n">testservers</span><span class="o">/</span><span class="n">tasks</span>
+
+  <span class="n">main</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>インベントリファイルの対象サーバを編集します。</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Playbookを実行します。</li>
+</ol>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ansible-playbook</span> <span class="pre">-i</span> <span class="pre">/etc/ansible/collect_logs/hosts</span> <span class="pre">/etc/ansible/collect_logs/main.yml</span></code></div></blockquote>
+<ol class="arabic simple" start="5">
+<li>ローカルサーバにログが収集されていることを確認しましょう。</li>
+</ol>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ls</span> <span class="pre">-a</span> <span class="pre">/var/log/ansible-collect-logs/</span></code></div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Sphinx.html" class="btn btn-neutral" title="Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, HN.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

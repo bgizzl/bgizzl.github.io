@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sphinx &mdash; manual 0.1 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="検索" href="search.html"/>
+    <link rel="top" title="manual 0.1 ドキュメント" href="index.html"/>
+        <link rel="next" title="Ansible" href="Ansible.html"/>
+        <link rel="prev" title="Welcome to manual’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">導入手順</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">プロジェクトの作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html">Ansible</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">manual</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Sphinx.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinx">
+<h1>Sphinx<a class="headerlink" href="#sphinx" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>はじめに<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>本ドキュメントはSphinx(ドキュメント作成ツール)の導入手順について説明したものとなります。</p>
+</div>
+<div class="section" id="id2">
+<h2>導入手順<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<div class="last line-block">
+<div class="line">本手順はWindowsを想定して書かれています。</div>
+</div>
+</div>
+<p><strong>1. Pythonのインストール</strong></p>
+<blockquote>
+<div><p>下記をダウンロードし、PCにPythonをインストールします。</p>
+<p><a class="reference download internal" href="_downloads/python-2.7.13.msi" download=""><code class="xref download docutils literal"><span class="pre">python-2.7.13.msi</span></code></a></p>
+</div></blockquote>
+<p><strong>2. 環境変数の追加</strong></p>
+<blockquote>
+<div><p>コマンドプロンプトからPythonが起動できるように環境変数を追加します。</p>
+<ul class="simple">
+<li>マイコンピュータのアイコンを右クリックして、プロパティダイアログを開きます。</li>
+<li>詳細タブの下の方にある環境変数ボタンをクリックします。</li>
+<li>システム変数のPATHを編集して、パスを追加します。</li>
+</ul>
+</div></blockquote>
+<table border="1" class="colwidths-given docutils" id="id4">
+<caption><span class="caption-text"><strong>追加するパス</strong></span><a class="headerlink" href="#id4" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パス</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>C:¥Python27</td>
+<td>Pythonのコマンドが含まれるフォルダ</td>
+</tr>
+<tr class="row-odd"><td>C:¥Python27¥Scripts</td>
+<td>easy_installコマンドや、Sphinxのコマンドが格納されるフォルダ</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3. Pythonのインストールの確認</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">python</span></code> とタイプします。</li>
+<li>Pythonのバージョンが表示されていればインストールされています。</li>
+</ul>
+</div></blockquote>
+<p><strong>4. Sphinxのインストール</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code> とタイプします。</li>
+<li>インストールが完了したら次のプロジェクトの作成に進みます。</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>プロジェクトの作成<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>1. Sphinxでプロジェクトを作成するには、コマンドプロンプトで以下をタイプします。</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">sphinx-quickstart</span></code></p>
+<p>いくつか質問されます。絶対に回答しなければならないのは、次の項目です。任意の名前で大丈夫です。後はEnterキーだけで大丈夫です。</p>
+<ul class="simple">
+<li>プロジェクト名</li>
+<li>バージョン番号</li>
+<li>著者の名前</li>
+</ul>
+</div></blockquote>
+<p><strong>2. 雛形は出来ました。後はページを作っていきましょう。</strong></p>
+<blockquote>
+<div>参照元:
+<a class="reference external" href="http://sphinx-users.jp/gettingstarted/install_windows.html">http://sphinx-users.jp/gettingstarted/install_windows.html</a></div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Ansible.html" class="btn btn-neutral float-right" title="Ansible" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to manual’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, HN.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
