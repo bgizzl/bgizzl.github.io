@@ -99,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id4">ベストプラクティス</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">モジュール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#playbook">ログ収集Playbook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">システム情報収集Playbook</a></li>
 </ul>
 </li>
 </ul>
@@ -362,6 +363,51 @@
 </ol>
 <blockquote>
 <div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ls</span> <span class="pre">-a</span> <span class="pre">/var/log/ansible-collect-logs/</span></code></div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>システム情報収集Playbook<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">Ansibleを使用したシステム情報収集のPlaybookを紹介します。</div>
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li>まず下記ファイルをダウンロードします。</li>
+</ol>
+<blockquote>
+<div><a class="reference download internal" href="_downloads/compare_configs" download=""><code class="xref download docutils literal"><span class="pre">compare_configs</span></code></a></div></blockquote>
+<ol class="arabic simple" start="2">
+<li>ファイルを <code class="docutils literal"><span class="pre">/etc/ansible/</span></code> にディレクトリごと格納します。</li>
+</ol>
+<blockquote>
+<div><p>ディレクトリ構造</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ansible</span><span class="o">/</span><span class="n">compare_configs</span><span class="o">/</span>
+
+  <span class="n">create</span><span class="o">-</span><span class="n">config</span><span class="o">.</span><span class="n">sh</span>
+  <span class="n">hosts</span>
+  <span class="n">main</span><span class="o">.</span><span class="n">yml</span>
+
+  <span class="n">roles</span><span class="o">/</span><span class="n">testservers</span><span class="o">/</span><span class="n">tasks</span>
+
+  <span class="n">main</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>インベントリファイルの対象サーバを編集します。</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Playbookを実行します。</li>
+</ol>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ansible-playbook</span> <span class="pre">-i</span> <span class="pre">/etc/ansible/compare_configs/hosts</span> <span class="pre">/etc/ansible/compare_configs/main.yml</span></code></div></blockquote>
+<ol class="arabic simple" start="5">
+<li>ローカルサーバにシステム情報が収集されていることを確認しましょう。</li>
+</ol>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">#</span> <span class="pre">ls</span> <span class="pre">-a</span> <span class="pre">/var/log/ansible-compare-configs/</span></code></div></blockquote>
 </div>
 </div>
 
