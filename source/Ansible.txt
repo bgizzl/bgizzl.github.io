@@ -157,7 +157,7 @@ Ansibleの構成要素
 
 1. まず下記リンクよりファイルをダウンロードします。
 
- ダウンロードリンク:https://github.com/bgizzl/collect_configs
+ ダウンロードリンク:https://github.com/bgizzl/collect_logs
 
 2. 「collect_logs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
 
