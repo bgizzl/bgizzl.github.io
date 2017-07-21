@@ -103,6 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id7">システム情報収集Playbook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id8">Playbook実行結果</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id9">トラブルシューティング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ansible-galaxy">Ansible Galaxy</a></li>
 </ul>
 </li>
 </ul>
@@ -431,8 +432,8 @@
 <div class="line">Playbookが実行されると最後に結果が表示されます。</div>
 <div class="line"><br /></div>
 </div>
-<table border="1" class="colwidths-given docutils" id="id10">
-<caption><span class="caption-text"><strong>Playbook実行結果</strong></span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
+<table border="1" class="colwidths-given docutils" id="id12">
+<caption><span class="caption-text"><strong>Playbook実行結果</strong></span><a class="headerlink" href="#id12" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="40%" />
@@ -481,6 +482,40 @@
 <div class="line">・pingは通りますか？</div>
 <div class="line">・SSHするユーザーは正しく存在するユーザーですか？</div>
 <div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>結果がfailedとなる。</li>
+</ol>
+<div class="line-block">
+<div class="line">⇒ failedには様々な原因が考えられます。まずはPlaybookコマンドに <code class="docutils literal"><span class="pre">-vvv</span></code> をつけてデバッグしてみましょう。</div>
+<div class="line">・例: <code class="docutils literal"><span class="pre">#</span> <span class="pre">ansible-playbook</span> <span class="pre">-vvv</span> <span class="pre">-i</span> <span class="pre">/etc/ansible/collect_logs/hosts</span> <span class="pre">/etc/ansible/collect_logs/main.yml</span></code></div>
+<div class="line">・原因が判明したら、その原因を取り除きます。</div>
+<div class="line">・その他構文エラーも多く見られます。一度Playbookを見直してみましょう。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ansible-galaxy">
+<h2>Ansible Galaxy<a class="headerlink" href="#ansible-galaxy" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">AnsibleにはGalaxyと呼ばれるユーザー同士がPlaybookをシェアできるサイトがあります。</div>
+<div class="line">また、ここではシェアされたPlaybookをインストールすることも可能です。</div>
+<div class="line">Ansible Galaxy:https://galaxy.ansible.com/</div>
+</div>
+<ul class="simple">
+<li>使い方</li>
+</ul>
+<div class="line-block">
+<div class="line">Ansibleをインストールした際に <code class="docutils literal"><span class="pre">ansible-galaxy</span></code> コマンドも同時にインストールされています。</div>
+<div class="line">このコマンドを使い、playbookやrolesをインストールすることが出来ます。</div>
+<div class="line">コマンド <code class="docutils literal"><span class="pre">ansible-galaxy</span> <span class="pre">install</span> <span class="pre">username.role_name</span></code></div>
+<div class="line">コマンド例 <a href="#id10"><span class="problematic" id="id11">``</span></a>ansible-galaxy install nickhammond.logrotate</div>
+</div>
+<a class="reference internal image-reference" href="_images/Ansible_Galaxy.PNG"><img alt="_images/Ansible_Galaxy.PNG" src="_images/Ansible_Galaxy.PNG" style="width: 1505.0px; height: 810.0px;" /></a>
+<div class="admonition hint">
+<p class="first admonition-title">ヒント</p>
+<div class="last line-block">
+<div class="line">サイトには多くのPlaybookやrolesがあります。色々探してみて、Playbook作成に役立てましょう。</div>
+</div>
 </div>
 <ol class="arabic simple" start="2">
 <li>結果がfailedとなる。</li>

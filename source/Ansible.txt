@@ -276,8 +276,8 @@ Ansible Galaxy
 
 | Ansibleをインストールした際に ``ansible-galaxy`` コマンドも同時にインストールされています。
 | このコマンドを使い、playbookやrolesをインストールすることが出来ます。
-| コマンド: ``ansible-galaxy install username.role_name``
-| 例: ``ansible-galaxy install nickhammond.logrotate
+| コマンド ``ansible-galaxy install username.role_name``
+| コマンド例 ``ansible-galaxy install nickhammond.logrotate
 
 .. image:: ./素材/Ansible_Galaxy.PNG
    :scale: 100%   
