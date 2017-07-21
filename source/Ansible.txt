@@ -265,5 +265,34 @@ Playbook実行結果
 | ・その他構文エラーも多く見られます。一度Playbookを見直してみましょう。
 | 
 
+Ansible Galaxy
+==========================
+
+| AnsibleにはGalaxyと呼ばれるユーザー同士がPlaybookをシェアできるサイトがあります。
+| また、ここではシェアされたPlaybookをインストールすることも可能です。
+| Ansible Galaxy:https://galaxy.ansible.com/
+
+- 使い方
+
+| Ansibleをインストールした際に ``ansible-galaxy`` コマンドも同時にインストールされています。
+| このコマンドを使い、playbookやrolesをインストールすることが出来ます。
+| コマンド: ``ansible-galaxy install username.role_name``
+| 例: ``ansible-galaxy install nickhammond.logrotate
+
+.. image:: ./素材/Ansible_Galaxy.PNG
+   :scale: 100%   
+
+.. hint::
+
+ | サイトには多くのPlaybookやrolesがあります。色々探してみて、Playbook作成に役立てましょう。
+
+
+2. 結果がfailedとなる。
+
+| ⇒ failedには様々な原因が考えられます。まずはPlaybookコマンドに ``-vvv`` をつけてデバッグしてみましょう。
+| ・例: ``# ansible-playbook -vvv -i /etc/ansible/collect_logs/hosts /etc/ansible/collect_logs/main.yml``
+| ・原因が判明したら、その原因を取り除きます。
+| ・その他構文エラーも多く見られます。一度Playbookを見直してみましょう。
+| 
 
 
