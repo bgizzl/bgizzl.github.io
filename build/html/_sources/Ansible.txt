@@ -270,7 +270,8 @@ Ansible Galaxy
 
 | AnsibleにはGalaxyと呼ばれるユーザー同士がPlaybookをシェアできるサイトがあります。
 | また、ここではシェアされたPlaybookをインストールすることも可能です。
- 
+|
+
  Ansible Galaxy:https://galaxy.ansible.com/
 
 - 使い方
