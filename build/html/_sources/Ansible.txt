@@ -155,11 +155,11 @@ Ansibleの構成要素
 | Ansibleを使用したログ収集のPlaybookを紹介します。
 | 
 
-1. まず下記ファイルをダウンロードします。
+1. まず下記リンクよりファイルをダウンロードします。
 
- :download:`collect_logs<collect_logs>`
+ ダウンロードリンク:https://github.com/bgizzl/collect_configs
 
-2. ファイルを ``/etc/ansible/`` にディレクトリごと格納します。
+2. 「collect_logs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
 
  ディレクトリ構造 ::
 
@@ -190,11 +190,11 @@ Ansibleの構成要素
 | Ansibleを使用したシステム情報収集のPlaybookを紹介します。
 | 
 
-1. まず下記ファイルをダウンロードします。
+1. まず下記リンクよりファイルをダウンロードします。
 
- :download:`compare_configs<compare_configs>`
+ ダウンロードリンク:https://github.com/bgizzl/compare_configs
 
-2. ファイルを ``/etc/ansible/`` にディレクトリごと格納します。
+2. 「compare_configs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
 
  ディレクトリ構造 ::
 
