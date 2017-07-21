@@ -273,13 +273,14 @@ Ansible Galaxy
 | また、ここではシェアされたPlaybookをインストールすることも可能です。
 |
 
- Ansible Galaxy:https://galaxy.ansible.com/
+ Ansible Galaxy :https://galaxy.ansible.com/
 
 - 使い方
 
 | Ansibleをインストールした際に ``ansible-galaxy`` コマンドも同時にインストールされています。
-| このコマンドを使い、playbookやrolesをインストールすることが出来ます。
-| コマンド ``ansible-galaxy install username.role_name``
+| 下記コマンドを使い、playbookやrolesをインストールすることが出来ます。
+| ``ansible-galaxy install username.role_name``
+|
 
 .. image:: ./素材/Ansible_Galaxy.PNG
    :scale: 100%   
