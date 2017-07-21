@@ -16,7 +16,7 @@ Sphinx
 
  下記をダウンロードし、PCにPythonをインストールします。
 
- :download:`python-2.7.13.msi<python-2.7.13.msi>`
+ :download:`python-2.7.13.msi<./素材/python-2.7.13.msi>`
 
 
 **2. 環境変数の追加**
