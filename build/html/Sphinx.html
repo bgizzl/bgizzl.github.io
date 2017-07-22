@@ -176,20 +176,33 @@
 <div class="line">本手順はWindowsを想定して書かれています。</div>
 </div>
 </div>
-<p><strong>1. Pythonのインストール</strong></p>
+<ol class="arabic simple">
+<li>Pythonのインストール</li>
+</ol>
 <blockquote>
 <div><p>下記をダウンロードし、PCにPythonをインストールします。</p>
 <p><a class="reference download internal" href="_downloads/python-2.7.13.msi" download=""><code class="xref download docutils literal"><span class="pre">python-2.7.13.msi</span></code></a></p>
 </div></blockquote>
-<p><strong>2. 環境変数の追加</strong></p>
-<blockquote>
-<div><p>コマンドプロンプトからPythonが起動できるように環境変数を追加します。</p>
-<ul class="simple">
-<li>マイコンピュータのアイコンを右クリックして、プロパティダイアログを開きます。</li>
-<li>詳細タブの下の方にある環境変数ボタンをクリックします。</li>
-<li>システム変数のPATHを編集して、パスを追加します。</li>
-</ul>
-</div></blockquote>
+<div class="line-block">
+<div class="line">Install for all usersを選択しNextを押下。</div>
+</div>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_1.PNG"><img alt="_images/Sphinx_Install_1.PNG" src="_images/Sphinx_Install_1.PNG" style="width: 772.0px; height: 663.0px;" /></a>
+<div class="line-block">
+<div class="line">Nextを押下。</div>
+</div>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_2.PNG"><img alt="_images/Sphinx_Install_2.PNG" src="_images/Sphinx_Install_2.PNG" style="width: 772.0px; height: 667.0px;" /></a>
+<div class="line-block">
+<div class="line">デフォルトではpythonを環境変数に追加するオプションがオフになっています。これをオンにしてNextを押下。</div>
+</div>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_3.PNG"><img alt="_images/Sphinx_Install_3.PNG" src="_images/Sphinx_Install_3.PNG" style="width: 772.0px; height: 663.0px;" /></a>
+<div class="line-block">
+<div class="line">オフ⇒オン</div>
+</div>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_4.PNG"><img alt="_images/Sphinx_Install_4.PNG" src="_images/Sphinx_Install_4.PNG" style="width: 772.0px; height: 663.0px;" /></a>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">ここでオフのままインストールを実施すると、後で手動で環境変数を追加する必要があります！下記のパスをシステムの環境変数に追加して下さい。</p>
+</div>
 <table border="1" class="colwidths-given docutils" id="id4">
 <caption><span class="caption-text"><strong>追加するパス</strong></span><a class="headerlink" href="#id4" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
@@ -210,24 +223,26 @@
 </tr>
 </tbody>
 </table>
-<p><strong>3. Pythonのインストールの確認</strong></p>
+<div class="line-block">
+<div class="line">インストールが開始されます。インストールが終了したらFinishを押下。</div>
+</div>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_5.PNG"><img alt="_images/Sphinx_Install_5.PNG" src="_images/Sphinx_Install_5.PNG" style="width: 772.0px; height: 663.0px;" /></a>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_6.PNG"><img alt="_images/Sphinx_Install_6.PNG" src="_images/Sphinx_Install_6.PNG" style="width: 772.0px; height: 663.0px;" /></a>
+<div class="line-block">
+<div class="line">コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">python</span></code> とタイプします。pythonのバージョンが表示されていればインストール完了です。</div>
+</div>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_7.PNG"><img alt="_images/Sphinx_Install_7.PNG" src="_images/Sphinx_Install_7.PNG" style="width: 1129.0px; height: 211.0px;" /></a>
+<ol class="arabic simple" start="2">
+<li>Sphinxのインストール</li>
+</ol>
 <blockquote>
-<div><ul class="simple">
-<li>コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">python</span></code> とタイプします。</li>
-<li>Pythonのバージョンが表示されていればインストールされています。</li>
-</ul>
-</div></blockquote>
-<p><strong>4. Sphinxのインストール</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li>コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code> とタイプします。</li>
-<li>インストールが完了したら次のプロジェクトの作成に進みます。</li>
-</ul>
-</div></blockquote>
+<div>コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code> とタイプします。自動でインストール進行しますので、完了したら次のプロジェクトの作成に進みましょう。</div></blockquote>
 </div>
 <div class="section" id="id3">
 <h2>プロジェクトの作成<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><strong>1. Sphinxでプロジェクトを作成するには、コマンドプロンプトで以下をタイプします。</strong></p>
+<ol class="arabic simple">
+<li>Sphinxでプロジェクトを作成するには、コマンドプロンプトで以下をタイプします。</li>
+</ol>
 <blockquote>
 <div><p><code class="docutils literal"><span class="pre">sphinx-quickstart</span></code></p>
 <p>いくつか質問されます。絶対に回答しなければならないのは、次の項目です。任意の名前で大丈夫です。後はEnterキーだけで大丈夫です。</p>
@@ -237,7 +252,9 @@
 <li>著者の名前</li>
 </ul>
 </div></blockquote>
-<p><strong>2. 雛形は出来ました。後はページを作っていきましょう。</strong></p>
+<ol class="arabic simple" start="2">
+<li>雛形は出来ました。後はページを作っていきましょう。</li>
+</ol>
 <blockquote>
 <div>参照元:
 <a class="reference external" href="http://sphinx-users.jp/gettingstarted/install_windows.html">http://sphinx-users.jp/gettingstarted/install_windows.html</a></div></blockquote>

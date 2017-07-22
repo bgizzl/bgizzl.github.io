@@ -12,20 +12,35 @@ Sphinx
 
  | 本手順はWindowsを想定して書かれています。
 
-**1. Pythonのインストール**
+1. Pythonのインストール
 
  下記をダウンロードし、PCにPythonをインストールします。
 
  :download:`python-2.7.13.msi<./素材/python-2.7.13.msi>`
 
+| Install for all usersを選択しNextを押下。
 
-**2. 環境変数の追加**
+.. image:: ./素材/Sphinx_Install_1.PNG
+   :scale: 100%
 
- コマンドプロンプトからPythonが起動できるように環境変数を追加します。
+| Nextを押下。
 
- - マイコンピュータのアイコンを右クリックして、プロパティダイアログを開きます。
- - 詳細タブの下の方にある環境変数ボタンをクリックします。
- - システム変数のPATHを編集して、パスを追加します。
+.. image:: ./素材/Sphinx_Install_2.PNG
+   :scale: 100%
+
+| デフォルトではpythonを環境変数に追加するオプションがオフになっています。これをオンにしてNextを押下。
+
+.. image:: ./素材/Sphinx_Install_3.PNG
+   :scale: 100%
+
+| オフ⇒オン
+
+.. image:: ./素材/Sphinx_Install_4.PNG
+   :scale: 100%
+
+.. warning::
+
+ ここでオフのままインストールを実施すると、後で手動で環境変数を追加する必要があります！下記のパスをシステムの環境変数に追加して下さい。
 
 .. csv-table:: **追加するパス**
  :header: "パス", "説明"
@@ -34,21 +49,27 @@ Sphinx
  "C:¥Python27", "Pythonのコマンドが含まれるフォルダ"
  "C:¥Python27¥Scripts", "easy_installコマンドや、Sphinxのコマンドが格納されるフォルダ"
 
+| インストールが開始されます。インストールが終了したらFinishを押下。
 
-**3. Pythonのインストールの確認**
+.. image:: ./素材/Sphinx_Install_5.PNG
+   :scale: 100%
 
- - コマンドプロンプトを起動し、 ``python`` とタイプします。
- - Pythonのバージョンが表示されていればインストールされています。
+.. image:: ./素材/Sphinx_Install_6.PNG
+   :scale: 100%
 
-**4. Sphinxのインストール**
+| コマンドプロンプトを起動し、 ``python`` とタイプします。pythonのバージョンが表示されていればインストール完了です。
 
- - コマンドプロンプトを起動し、 ``pip install sphinx`` とタイプします。
- - インストールが完了したら次のプロジェクトの作成に進みます。
+.. image:: ./素材/Sphinx_Install_7.PNG
+   :scale: 100%
+
+2. Sphinxのインストール
+
+ コマンドプロンプトを起動し、 ``pip install sphinx`` とタイプします。自動でインストール進行しますので、完了したら次のプロジェクトの作成に進みましょう。
 
 プロジェクトの作成
 =====================
 
-**1. Sphinxでプロジェクトを作成するには、コマンドプロンプトで以下をタイプします。**
+1. Sphinxでプロジェクトを作成するには、コマンドプロンプトで以下をタイプします。
 
  ``sphinx-quickstart``
  
@@ -58,7 +79,7 @@ Sphinx
  - バージョン番号
  - 著者の名前
 
-**2. 雛形は出来ました。後はページを作っていきましょう。**
+2. 雛形は出来ました。後はページを作っていきましょう。
 
  参照元:
  http://sphinx-users.jp/gettingstarted/install_windows.html
