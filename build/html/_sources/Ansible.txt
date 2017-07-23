@@ -159,7 +159,7 @@ Ansibleの構成要素
 
  ダウンロードリンク:https://github.com/bgizzl/collect_logs
 
-.. image:: ./素材/collect_logs.PNG
+.. image:: ./_static/image/collect_logs.PNG
    :scale: 50%   
    
 2. 「collect_logs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
@@ -197,7 +197,7 @@ Ansibleの構成要素
 
  ダウンロードリンク:https://github.com/bgizzl/compare_configs
 
-.. image:: ./素材/compare_configs.PNG
+.. image:: ./_static/image/compare_configs.PNG
    :scale: 50%   
 
 2. 「compare_configs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
@@ -282,7 +282,7 @@ Ansible Galaxy
 | ``ansible-galaxy install username.role_name``
 |
 
-.. image:: ./素材/Ansible_Galaxy.PNG
+.. image:: ./_static/image/Ansible_Galaxy.PNG
    :scale: 50%   
 
 .. hint::
