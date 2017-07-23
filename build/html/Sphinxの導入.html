@@ -26,7 +26,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
     <link rel="next" title="Sphinxの運用" href="Sphinxの運用.html" />
-    <link rel="prev" title="目次" href="index.html" />
+    <link rel="prev" title="Sphinxの導入" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -43,7 +43,7 @@
           <a href="Sphinxの運用.html" title="Sphinxの運用"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
-          <a href="index.html" title="目次"
+          <a href="index.html" title="Sphinxの導入"
              accesskey="P">前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">manual 0.1 ドキュメント</a> &#187;</li> 
       </ul>
@@ -62,7 +62,7 @@
 
   <h4>前のトピックへ</h4>
   <p class="topless"><a href="index.html"
-                        title="前の章へ">目次</a></p>
+                        title="前の章へ">Sphinxの導入</a></p>
   <h4>次のトピックへ</h4>
   <p class="topless"><a href="Sphinxの運用.html"
                         title="次の章へ">Sphinxの運用</a></p>
@@ -101,9 +101,7 @@
 <h2>導入手順<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<div class="last line-block">
-<div class="line">本手順はWindowsを想定して書かれています。</div>
-</div>
+<p class="last">本手順はWindowsを想定して書かれています。</p>
 </div>
 <ol class="arabic simple">
 <li>Pythonのインストール</li>
@@ -111,23 +109,15 @@
 <blockquote>
 <div><p>下記をダウンロードし、PCにPythonをインストールします。</p>
 <p><a class="reference download internal" href="_downloads/python-2.7.13.msi" download=""><code class="xref download docutils literal"><span class="pre">python-2.7.13.msi</span></code></a></p>
+<p>Install for all usersを選択しNextを押下。</p>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_1.PNG"><img alt="_images/Sphinx_Install_1.PNG" src="_images/Sphinx_Install_1.PNG" style="width: 386.0px; height: 331.5px;" /></a>
+<p>Nextを押下。</p>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_2.PNG"><img alt="_images/Sphinx_Install_2.PNG" src="_images/Sphinx_Install_2.PNG" style="width: 386.0px; height: 333.5px;" /></a>
+<p>デフォルトではpythonを環境変数に追加するオプションがオフになっています。これをオンにしてNextを押下。</p>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_3.PNG"><img alt="_images/Sphinx_Install_3.PNG" src="_images/Sphinx_Install_3.PNG" style="width: 386.0px; height: 331.5px;" /></a>
+<p>オフ⇒オン</p>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_4.PNG"><img alt="_images/Sphinx_Install_4.PNG" src="_images/Sphinx_Install_4.PNG" style="width: 386.0px; height: 331.5px;" /></a>
 </div></blockquote>
-<div class="line-block">
-<div class="line">Install for all usersを選択しNextを押下。</div>
-</div>
-<a class="reference internal image-reference" href="_images/Sphinx_Install_1.PNG"><img alt="_images/Sphinx_Install_1.PNG" src="_images/Sphinx_Install_1.PNG" style="width: 772.0px; height: 663.0px;" /></a>
-<div class="line-block">
-<div class="line">Nextを押下。</div>
-</div>
-<a class="reference internal image-reference" href="_images/Sphinx_Install_2.PNG"><img alt="_images/Sphinx_Install_2.PNG" src="_images/Sphinx_Install_2.PNG" style="width: 772.0px; height: 667.0px;" /></a>
-<div class="line-block">
-<div class="line">デフォルトではpythonを環境変数に追加するオプションがオフになっています。これをオンにしてNextを押下。</div>
-</div>
-<a class="reference internal image-reference" href="_images/Sphinx_Install_3.PNG"><img alt="_images/Sphinx_Install_3.PNG" src="_images/Sphinx_Install_3.PNG" style="width: 772.0px; height: 663.0px;" /></a>
-<div class="line-block">
-<div class="line">オフ⇒オン</div>
-</div>
-<a class="reference internal image-reference" href="_images/Sphinx_Install_4.PNG"><img alt="_images/Sphinx_Install_4.PNG" src="_images/Sphinx_Install_4.PNG" style="width: 772.0px; height: 663.0px;" /></a>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
 <p class="last">ここでオフのままインストールを実施すると、後で手動で環境変数を追加する必要があります！下記のパスをシステムの環境変数に追加して下さい。</p>
@@ -135,8 +125,8 @@
 <table border="1" class="colwidths-given docutils" id="id4">
 <caption><span class="caption-text"><strong>追加するパス</strong></span><a class="headerlink" href="#id4" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
-<col width="33%" />
-<col width="67%" />
+<col width="25%" />
+<col width="75%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">パス</th>
@@ -153,21 +143,27 @@
 </tbody>
 </table>
 <div class="line-block">
-<div class="line">インストールが開始されます。インストールが終了したらFinishを押下。</div>
+<div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="_images/Sphinx_Install_5.PNG"><img alt="_images/Sphinx_Install_5.PNG" src="_images/Sphinx_Install_5.PNG" style="width: 772.0px; height: 663.0px;" /></a>
-<a class="reference internal image-reference" href="_images/Sphinx_Install_6.PNG"><img alt="_images/Sphinx_Install_6.PNG" src="_images/Sphinx_Install_6.PNG" style="width: 772.0px; height: 663.0px;" /></a>
+<blockquote>
+<div><p>インストールが開始されます。インストールが終了したらFinishを押下。</p>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_5.PNG"><img alt="_images/Sphinx_Install_5.PNG" src="_images/Sphinx_Install_5.PNG" style="width: 386.0px; height: 331.5px;" /></a>
+</div></blockquote>
 <div class="line-block">
-<div class="line">コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">python</span></code> とタイプします。pythonのバージョンが表示されていればインストール完了です。</div>
+<div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="_images/Sphinx_Install_7.PNG"><img alt="_images/Sphinx_Install_7.PNG" src="_images/Sphinx_Install_7.PNG" style="width: 1129.0px; height: 211.0px;" /></a>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/Sphinx_Install_6.PNG"><img alt="_images/Sphinx_Install_6.PNG" src="_images/Sphinx_Install_6.PNG" style="width: 386.0px; height: 331.5px;" /></a>
+<p>コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">python</span></code> とタイプします。pythonのバージョンが表示されていればインストール完了です。</p>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_7.PNG"><img alt="_images/Sphinx_Install_7.PNG" src="_images/Sphinx_Install_7.PNG" style="width: 564.5px; height: 105.5px;" /></a>
+</div></blockquote>
 <ol class="arabic simple" start="2">
 <li>Sphinxのインストール</li>
 </ol>
-<div class="line-block">
-<div class="line">コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code> とタイプします。自動でインストールが進行しますので、完了したら次のプロジェクトの作成に進みましょう。</div>
-</div>
-<a class="reference internal image-reference" href="_images/Sphinx_Install_8.PNG"><img alt="_images/Sphinx_Install_8.PNG" src="_images/Sphinx_Install_8.PNG" style="width: 1263.0px; height: 182.0px;" /></a>
+<blockquote>
+<div><p>コマンドプロンプトを起動し、 <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code> とタイプします。自動でインストールが進行しますので、完了したら次のプロジェクトの作成に進みましょう。</p>
+<a class="reference internal image-reference" href="_images/Sphinx_Install_8.PNG"><img alt="_images/Sphinx_Install_8.PNG" src="_images/Sphinx_Install_8.PNG" style="width: 631.5px; height: 91.0px;" /></a>
+</div></blockquote>
 </div>
 <div class="section" id="id3">
 <h2>プロジェクトの作成<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -177,13 +173,14 @@
 <blockquote>
 <div><p><code class="docutils literal"><span class="pre">sphinx-quickstart</span></code></p>
 <p>いくつか質問されます。絶対に回答しなければならないのは、次の項目です。任意の名前で大丈夫です。後は下記詳細を参照しながら回答して下さい。</p>
+</div></blockquote>
 <ul class="simple">
 <li>プロジェクト名</li>
 <li>バージョン番号</li>
 <li>著者の名前</li>
 </ul>
-</div></blockquote>
-<p>sphinx-quickstart詳細</p>
+<blockquote>
+<div><p>sphinx-quickstart詳細</p>
 <div class="highlight-rout"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -335,12 +332,12 @@
 <span class="go">where &quot;builder&quot; is one of the supported builders, e.g. html, latex or linkcheck.</span>
 </pre></div>
 </td></tr></table></div>
+</div></blockquote>
 <ol class="arabic simple" start="2">
 <li>雛形は出来ました。後はページを作っていきましょう。</li>
 </ol>
 <blockquote>
-<div>参照元:
-<a class="reference external" href="http://sphinx-users.jp/gettingstarted/install_windows.html">http://sphinx-users.jp/gettingstarted/install_windows.html</a></div></blockquote>
+<div>参照元:<a class="reference external" href="http://sphinx-users.jp/gettingstarted/install_windows.html">http://sphinx-users.jp/gettingstarted/install_windows.html</a></div></blockquote>
 </div>
 </div>
 
@@ -360,7 +357,7 @@
           <a href="Sphinxの運用.html" title="Sphinxの運用"
              >次へ</a> |</li>
         <li class="right" >
-          <a href="index.html" title="目次"
+          <a href="index.html" title="Sphinxの導入"
              >前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">manual 0.1 ドキュメント</a> &#187;</li> 
       </ul>

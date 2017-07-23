@@ -160,7 +160,7 @@ Ansibleの構成要素
  ダウンロードリンク:https://github.com/bgizzl/collect_logs
 
 .. image:: ./素材/collect_logs.PNG
-   :scale: 100%   
+   :scale: 50%   
    
 2. 「collect_logs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
 
@@ -198,7 +198,7 @@ Ansibleの構成要素
  ダウンロードリンク:https://github.com/bgizzl/compare_configs
 
 .. image:: ./素材/compare_configs.PNG
-   :scale: 100%   
+   :scale: 50%   
 
 2. 「compare_configs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
 
@@ -283,7 +283,7 @@ Ansible Galaxy
 |
 
 .. image:: ./素材/Ansible_Galaxy.PNG
-   :scale: 100%   
+   :scale: 50%   
 
 .. hint::
 

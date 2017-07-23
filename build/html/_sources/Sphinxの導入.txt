@@ -10,7 +10,7 @@ Sphinxの導入
 ==================
 .. note::
 
- | 本手順はWindowsを想定して書かれています。
+ 本手順はWindowsを想定して書かれています。
 
 1. Pythonのインストール
 
@@ -18,56 +18,61 @@ Sphinxの導入
 
  :download:`python-2.7.13.msi<./素材/python-2.7.13.msi>`
 
-| Install for all usersを選択しNextを押下。
+ Install for all usersを選択しNextを押下。
 
-.. image:: ./素材/Sphinx_Install_1.PNG
-   :scale: 100%
+ .. image:: ./素材/Sphinx_Install_1.PNG
+    :scale: 50%
 
-| Nextを押下。
+ Nextを押下。
 
-.. image:: ./素材/Sphinx_Install_2.PNG
-   :scale: 100%
+ .. image:: ./素材/Sphinx_Install_2.PNG
+    :scale: 50%
 
-| デフォルトではpythonを環境変数に追加するオプションがオフになっています。これをオンにしてNextを押下。
+ デフォルトではpythonを環境変数に追加するオプションがオフになっています。これをオンにしてNextを押下。
 
-.. image:: ./素材/Sphinx_Install_3.PNG
-   :scale: 100%
+ .. image:: ./素材/Sphinx_Install_3.PNG
+    :scale: 50%
 
-| オフ⇒オン
+ オフ⇒オン
 
-.. image:: ./素材/Sphinx_Install_4.PNG
-   :scale: 100%
+ .. image:: ./素材/Sphinx_Install_4.PNG
+    :scale: 50%
 
 .. warning::
 
  ここでオフのままインストールを実施すると、後で手動で環境変数を追加する必要があります！下記のパスをシステムの環境変数に追加して下さい。
 
+
 .. csv-table:: **追加するパス**
  :header: "パス", "説明"
- :widths: 15, 30
+ :widths: 15, 45
 
  "C:¥Python27", "Pythonのコマンドが含まれるフォルダ"
  "C:¥Python27¥Scripts", "easy_installコマンドや、Sphinxのコマンドが格納されるフォルダ"
 
-| インストールが開始されます。インストールが終了したらFinishを押下。
+|
 
-.. image:: ./素材/Sphinx_Install_5.PNG
-   :scale: 100%
+ インストールが開始されます。インストールが終了したらFinishを押下。
 
-.. image:: ./素材/Sphinx_Install_6.PNG
-   :scale: 100%
+ .. image:: ./素材/Sphinx_Install_5.PNG
+    :scale: 50%
 
-| コマンドプロンプトを起動し、 ``python`` とタイプします。pythonのバージョンが表示されていればインストール完了です。
+| 
 
-.. image:: ./素材/Sphinx_Install_7.PNG
-   :scale: 100%
+ .. image:: ./素材/Sphinx_Install_6.PNG
+    :scale: 50%
+
+ コマンドプロンプトを起動し、 ``python`` とタイプします。pythonのバージョンが表示されていればインストール完了です。
+
+ .. image:: ./素材/Sphinx_Install_7.PNG
+    :scale: 50%
 
 2. Sphinxのインストール
 
-| コマンドプロンプトを起動し、 ``pip install sphinx`` とタイプします。自動でインストールが進行しますので、完了したら次のプロジェクトの作成に進みましょう。
+ コマンドプロンプトを起動し、 ``pip install sphinx`` とタイプします。自動でインストールが進行しますので、完了したら次のプロジェクトの作成に進みましょう。
 
-.. image:: ./素材/Sphinx_Install_8.PNG
-   :scale: 100%
+ .. image:: ./素材/Sphinx_Install_8.PNG
+    :scale: 50%
 
 プロジェクトの作成
 =====================
@@ -78,14 +83,14 @@ Sphinxの導入
  
  いくつか質問されます。絶対に回答しなければならないのは、次の項目です。任意の名前で大丈夫です。後は下記詳細を参照しながら回答して下さい。
 
- - プロジェクト名
- - バージョン番号
- - 著者の名前
+- プロジェクト名
+- バージョン番号
+- 著者の名前
 
-.. highlight:: rout
-   :linenothreshold: 5
+ .. highlight:: rout
+    :linenothreshold: 5
 
-sphinx-quickstart詳細 ::
+ sphinx-quickstart詳細 ::
 
    $ sphinx-quickstart
    Welcome to the Sphinx quickstart utility.
@@ -165,7 +170,6 @@ sphinx-quickstart詳細 ::
 
 2. 雛形は出来ました。後はページを作っていきましょう。
 
- 参照元:
- http://sphinx-users.jp/gettingstarted/install_windows.html
+ 参照元:http://sphinx-users.jp/gettingstarted/install_windows.html
 
 
