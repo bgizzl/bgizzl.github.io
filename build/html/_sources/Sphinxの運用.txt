@@ -67,3 +67,5 @@ SphinxはソースファイルをreStructuredTextで記述する事によって�
 - 実在するようなコードのサンプルを使用する: Foo, Barはもうやめましょう。
 - なるべく少なく、かつ十分なドキュメント: あなたが書いているのは書籍ではありません！
 - テンプレートの使用: 読み手がどこに何が書いてあるかを把握しやすくなります。
+
+参照元:http://sphinx-users.jp/articles/expertpython/tips_for_technical_writing.html
