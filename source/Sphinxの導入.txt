@@ -16,7 +16,7 @@ Sphinxの導入
 
  下記をダウンロードし、PCにPythonをインストールします。
 
- :download:`python-2.7.13.msi<./_static/image/python-2.7.13.msi>`
+ :download:`python-2.7.13.msi<./_downloads/python-2.7.13.msi>`
 
  Install for all usersを選択しNextを押下。
 
