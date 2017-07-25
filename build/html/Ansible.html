@@ -65,6 +65,9 @@
 <li><a class="reference internal" href="#id8">Playbook実行結果</a></li>
 <li><a class="reference internal" href="#id9">トラブルシューティング</a></li>
 <li><a class="reference internal" href="#ansible-galaxy">Ansible Galaxy</a></li>
+<li><a class="reference internal" href="#id10">リリースノート</a></li>
+<li><a class="reference internal" href="#id11">バージョン</a></li>
+<li><a class="reference internal" href="#id12">イシュー</a></li>
 </ul>
 </li>
 </ul>
@@ -253,7 +256,16 @@
 </div>
 <div class="section" id="ansible-playbook">
 <h2>Ansible Playbookサンプル<a class="headerlink" href="#ansible-playbook" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Ansible Playbookのサンプルコードを紹介します。ここでは2台のコンピュータ間で簡単なPlaybook(ディレクトリ作成、Ping実行)を実施します。ここでAnsible Playbookの動作の概要を掴みましょう。</p>
+<div class="line-block">
+<div class="line">Ansible Playbookのサンプルコードを紹介します。ここでは2台のコンピュータ間で簡単なPlaybook(ディレクトリ作成、Ping実行)を実施します。ここでAnsible Playbookの動作の概要を掴みましょう。</div>
+</div>
+<div class="line-block">
+<div class="line">また、今回使用するインベントリファイルと、main.ymlファイルが下記からダウンロードできます。使用する際は、IPアドレスを環境に合わせて変更して使用して下さい。</div>
+</div>
+<div class="line-block">
+<div class="line"><a class="reference download internal" href="_downloads/hosts" download=""><code class="xref download docutils literal"><span class="pre">hosts</span></code></a></div>
+<div class="line"><a class="reference download internal" href="_downloads/main.yml" download=""><code class="xref download docutils literal"><span class="pre">main.yml</span></code></a></div>
+</div>
 <p>Ansible Plabybookサンプル</p>
 <div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -351,7 +363,7 @@
 <span class="c1">#今回は10.5.3.149から10.5.3.150に向けてAnsibleを実行します。</span>
 
 <span class="o">[</span>root@localhost ansible<span class="o">]</span><span class="c1"># ls</span>
-ansible.cfg  hosts  main.retry  main.yml
+hosts  main.retry  main.yml
 <span class="c1">#インベントリファイルとmain.ymlファイルを見ていきます。</span>
 
 <span class="o">[</span>root@localhost ansible<span class="o">]</span><span class="c1"># cat hosts</span>
@@ -509,8 +521,8 @@ d-wxrw--wt <span class="m">2</span> root root <span class="m">6</span>  <span cl
 <div class="section" id="id8">
 <h2>Playbook実行結果<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Playbookが実行されると最後に結果が表示されます。</p>
-<table border="1" class="colwidths-given docutils" id="id10">
-<caption><span class="caption-text"><strong>Playbook実行結果</strong></span><a class="headerlink" href="#id10" title="このテーブルへのパーマリンク">¶</a></caption>
+<table border="1" class="colwidths-given docutils" id="id13">
+<caption><span class="caption-text"><strong>Playbook実行結果</strong></span><a class="headerlink" href="#id13" title="このテーブルへのパーマリンク">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="40%" />
@@ -591,6 +603,27 @@ d-wxrw--wt <span class="m">2</span> root root <span class="m">6</span>  <span cl
 <p class="first admonition-title">ヒント</p>
 <p class="last">サイトには多くのPlaybookやrolesがあります。色々探してみて、Playbook作成に役立てましょう。</p>
 </div>
+</div>
+<div class="section" id="id10">
+<h2>リリースノート<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><p>Ansibleのリリースノートを下記に記します。バージョンに関する各種情報は概ね手に入れられるでしょう。</p>
+<p>Ansible Changes By Release :<a class="reference external" href="https://github.com/ansible/ansible/blob/devel/CHANGELOG.md">https://github.com/ansible/ansible/blob/devel/CHANGELOG.md</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="id11">
+<h2>バージョン<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><p>Ansibleの各バージョンダウンロードリンクを下記に記します。下記より希望のバージョンをダウンロードしましょう。</p>
+<p>Ansible Releases :<a class="reference external" href="https://github.com/ansible/ansible/releases">https://github.com/ansible/ansible/releases</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="id12">
+<h2>イシュー<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><p>Ansibleにはバグなど問題がまだまだあります。何か不具合など発見した場合、Googleや下記から問題を探し出すと、解決方法が見つかるかもしれません。</p>
+<p>Ansible Issues :<a class="reference external" href="https://github.com/ansible/ansible-modules-core/issues">https://github.com/ansible/ansible-modules-core/issues</a></p>
+</div></blockquote>
 </div>
 </div>
 

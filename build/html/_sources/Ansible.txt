@@ -151,7 +151,13 @@ Playbookはモジュールを組み合わせて作成されます。モジュー
 Ansible Playbookサンプル
 ==========================
 
-Ansible Playbookのサンプルコードを紹介します。ここでは2台のコンピュータ間で簡単なPlaybook(ディレクトリ作成、Ping実行)を実施します。ここでAnsible Playbookの動作の概要を掴みましょう。
+| Ansible Playbookのサンプルコードを紹介します。ここでは2台のコンピュータ間で簡単なPlaybook(ディレクトリ作成、Ping実行)を実施します。ここでAnsible Playbookの動作の概要を掴みましょう。
+
+| また、今回使用するインベントリファイルと、main.ymlファイルが下記からダウンロードできます。使用する際は、IPアドレスを環境に合わせて変更して使用して下さい。
+
+| :download:`hosts<./_downloads/hosts>`
+| :download:`main.yml<./_downloads/main.yml>`
+
 
 .. highlight:: bash
    :linenothreshold: 5
@@ -164,7 +170,7 @@ Ansible Plabybookサンプル ::
  #今回は10.5.3.149から10.5.3.150に向けてAnsibleを実行します。
 
  [root@localhost ansible]# ls
- ansible.cfg  hosts  main.retry  main.yml
+ hosts  main.retry  main.yml
  #インベントリファイルとmain.ymlファイルを見ていきます。
 
  [root@localhost ansible]# cat hosts 
@@ -384,3 +390,23 @@ Ansible Galaxy
 
   サイトには多くのPlaybookやrolesがあります。色々探してみて、Playbook作成に役立てましょう。
 
+リリースノート
+==========================
+
+ Ansibleのリリースノートを下記に記します。バージョンに関する各種情報は概ね手に入れられるでしょう。
+
+ Ansible Changes By Release :https://github.com/ansible/ansible/blob/devel/CHANGELOG.md
+
+バージョン
+==========================
+
+ Ansibleの各バージョンダウンロードリンクを下記に記します。下記より希望のバージョンをダウンロードしましょう。
+
+ Ansible Releases :https://github.com/ansible/ansible/releases
+
+イシュー
+==========================
+
+ Ansibleにはバグなど問題がまだまだあります。何か不具合など発見した場合、Googleや下記から問題を探し出すと、解決方法が見つかるかもしれません。
+
+ Ansible Issues :https://github.com/ansible/ansible-modules-core/issues

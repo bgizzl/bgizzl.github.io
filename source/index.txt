@@ -15,7 +15,8 @@ Sphinx
 
    Sphinxの導入
    Sphinxの運用
-   reStructuredText早見表
+   reST記法のよく使うもの
+   reST記法のまとめ
    
 Ansible
 ==================================

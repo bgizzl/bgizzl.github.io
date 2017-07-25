@@ -1,10 +1,10 @@
 =========================
-reStructuredText早見表
+reST記法のまとめ
 =========================
 
 はじめに
 ==========
-本ドキュメントはドキュメントを記述する際に使用するreStructuredTextの早見表となります。尚、本ドキュメントは記述の際の参考文書と位置づけています。詳細については `reStructuredText <http://docutils.sourceforge.net/rst.html>`_ 及び `reStructuredText入門 <http://docs.sphinx-users.jp/rest.html>`_ を参照して下さい。
+本ドキュメントはドキュメントを記述する際に使用するreStructuredTextをまとめたものとなります。尚、本ドキュメントは記述の際の参考文書と位置づけています。詳細については `reStructuredText <http://docutils.sourceforge.net/rst.html>`_ 及び `reStructuredText入門 <http://docs.sphinx-users.jp/rest.html>`_ を参照して下さい。
 
 
 インラインマークアップ
