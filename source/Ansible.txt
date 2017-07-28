@@ -262,14 +262,11 @@ Ansible Plabybookサンプル ::
 
 Ansibleを使用したターゲットからログ収集を行うPlaybookを紹介します。
 
-1.まず下記リンクよりファイルをダウンロード(Clone or downloadを押下)します。
+1.まず下記リンクよりファイルをダウンロードします。
 
-ダウンロードリンク:https://github.com/bgizzl/collect_logs
+:download:`collect_logs<./_downloads/collect_logs.zip>`
 
-.. image:: ./_static/image/collect_logs.PNG
-   :scale: 50%   
-   
-2.「collect_logs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
+2.解凍し、「collect_logs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
 
 ディレクトリ構造 ::
 
@@ -298,14 +295,11 @@ Ansibleを使用したターゲットからログ収集を行うPlaybookを紹�
 
 Ansibleを使用したターゲットからシステム情報収集を行うPlaybookを紹介します。
 
-1.まず下記リンクよりファイルをダウンロード(Clone or downloadを押下)します。
+1.まず下記リンクよりファイルをダウンロードします。
 
-ダウンロードリンク:https://github.com/bgizzl/compare_configs
+:download:`compare_configs<./_downloads/compare_configs.zip>`
 
-.. image:: ./_static/image/compare_configs.PNG
-   :scale: 50%   
-
-2.「compare_configs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
+2.解凍し、「compare_configs」ディレクトリを ``/etc/ansible/`` にディレクトリごと格納します。
 
  ディレクトリ構造 ::
 
